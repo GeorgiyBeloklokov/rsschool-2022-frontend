@@ -216,6 +216,10 @@ h1,h2,h3 {
   .nav__link:hover {
     color: var(--hover);
   }
+  
+  .logo__link:hover {
+    color: var(--hover);
+  }
 
   .copy:hover {
     color: var(--hover);

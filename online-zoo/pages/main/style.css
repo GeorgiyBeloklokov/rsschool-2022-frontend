@@ -159,6 +159,7 @@
   border-radius: 5px;
   border: 1px solid var(--orange);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .pets__item img{
