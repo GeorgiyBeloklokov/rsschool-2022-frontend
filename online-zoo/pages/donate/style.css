@@ -7,7 +7,28 @@
 }
 
 .donation {
-  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
   padding-top: 40px;
   padding-bottom: 180px;
 }
@@ -16,7 +37,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 130%;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -25,7 +46,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 45px;
 }
 
@@ -33,7 +54,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 130%;
-  color: #FE9013;
+  color: #fe9013;
   margin-bottom: 60px;
 }
 
@@ -50,7 +71,7 @@
   font-size: 48px;
   line-height: 120%;
   text-align: center;
-  color: #FE9013;
+  color: #fe9013;
   margin-bottom: 20px;
 }
 
@@ -58,7 +79,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
-  color: #333B41;
+  color: #333b41;
   margin-bottom: 55px;
 }
 
@@ -108,10 +129,8 @@
   font-size: 16px;
   line-height: 140%;
   text-align: center;
-  color: #333B41;
+  color: #333b41;
 }
-
-
 
 .donation__block-animal {
   margin-left: 89px;
@@ -143,7 +162,6 @@
   align-items: center;
   padding: 8px 13px 9px 26px;
   position: relative;
-
 }
 
 .donation__amount-track:before {
@@ -154,7 +172,7 @@
   height: 2px;
   top: 50%;
   transform: translateY(-50%);
-  background: #72828E;
+  background: #72828e;
   pointer-events: none;
 }
 
@@ -167,13 +185,13 @@
 }
 
 .donation__amount-point {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   padding: 0;
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #FFEE2E;
+  background: #ffee2e;
   border: none;
   cursor: pointer;
   pointer-events: none;
@@ -188,12 +206,12 @@
   position: absolute;
   width: 22.95px;
   height: 22.95px;
-  border: 2px solid #FE9013;
+  border: 2px solid #fe9013;
   border-radius: 50%;
   left: -8px;
   top: 50%;
   transform: translateY(-50%);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .donation__amount-point:after {
@@ -202,19 +220,19 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  border: 2px solid #FE9013;
+  border: 2px solid #fe9013;
   border-radius: 50%;
   left: -17px;
   top: 50%;
   transform: translateY(-50%);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
-.point--active:before, .point--active:after{
-  transition: all .3s ease;
+.point--active:before,
+.point--active:after {
+  transition: all 0.3s ease;
   opacity: 1;
 }
-
 
 .donation__amount-bucks {
   padding-right: 25px;
@@ -228,10 +246,8 @@
   font-size: 26px;
   line-height: 140%;
   text-transform: uppercase;
-  color: #333B41;
+  color: #333b41;
 }
-
-
 
 .donation__form {
   text-align: center;
@@ -240,7 +256,7 @@
   margin-top: 50px;
 }
 
-.donation__form-amount{
+.donation__form-amount {
   max-width: 268px;
   width: 100%;
   border: 1px solid #929699;
@@ -281,7 +297,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -295,7 +311,6 @@ input[type=number] {
   justify-content: space-between;
   align-items: center;
 }
-
 
 .donation__form-subs-input {
   width: 0;
@@ -318,14 +333,14 @@ input[type=number] {
   height: 16px;
   left: -25px;
   top: 0px;
-  border: 1px solid #FE9013;
+  border: 1px solid #fe9013;
   position: absolute;
   border-radius: 50%;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .donation__form label:after {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   content: '';
   opacity: 0;
   width: 12px;
@@ -333,7 +348,7 @@ input[type=number] {
   left: -22px;
   top: 50%;
   transform: translateY(-50%);
-  background: #FE9013;
+  background: #fe9013;
   position: absolute;
   border-radius: 50%;
 }
@@ -346,12 +361,12 @@ input[type=number] {
   display: block;
 }
 
-@media(hover:hover) {
+@media (hover: hover) {
   .donation__form label:hover {
-    color: var(--hover)
+    color: var(--hover);
   }
 
-  .donation__amount-button:hover span{
+  .donation__amount-button:hover span {
     background: var(--hover);
   }
 }
