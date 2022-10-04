@@ -1,6 +1,6 @@
 .favorite {
   min-height: 700px;
-  background-image: url('../../assets/images/favoriteBg.jpg');
+  background-image: url('../../assets/images/GiantPanda.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -1001,7 +1001,7 @@
 
   .favorite {
     min-height: 339px;
-    background-image: url('../../assets/images/favoriteBg_tablet.jpg');
+    background-image: url('../../assets/images/GiantPanda_tablet.jpg');
     background-size: cover;
   }
 
@@ -1306,7 +1306,7 @@
 @media (max-width: 480px) {
   .favorite {
     min-height: 186px;
-    background-image: url('../../assets/images/favoriteBg_mobile.jpg');
+    background-image: url('../../assets/images/GiantPanda_mobile.jpg');
 
     background-size: cover;
   }
