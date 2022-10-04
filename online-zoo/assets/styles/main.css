@@ -208,7 +208,7 @@ template {
 	--black: #000;
 	--yellow: #ffee2e;
 	--black_blue: #333b41;
-	--green: #4b9200;
+	--darkOrange: #f9804b;
 	--frosted_glass_white: #fdfdff;
 	--gray_light: #f1f3f2;
 	--gray: #767474;
@@ -558,8 +558,8 @@ h3 {
 }
 
 .footer__news-input:valid {
-	color: #4b9200;
-	border-color: #4b9200;
+	color: #a46818;
+	border-color: #a46818;
 }
 
 .footer__news-input:focus:invalid {
@@ -569,8 +569,8 @@ h3 {
 }
 
 .footer__news-input:valid + .footer__news-btn {
-	color: #4b9200;
-	border-color: #4b9200;
+	color: #a46818;
+	border-color: #a46818;
 }
 
 .footer__news-input:focus:invalid + .footer__news-btn {
@@ -943,12 +943,12 @@ h3 {
 	}
 
 	.footer__link:hover .footer__link-circle {
-		background: var(--green);
+		background: var(--darkOrange);
 	}
 }
 
 .footer__designed-link:active {
-	color: var(--green);
+	color: var(--darkOrange);
 }
 
 .link--active {
@@ -962,7 +962,7 @@ h3 {
 }
 
 .nav__link:active {
-	color: var(--green);
+	color: var(--darkOrange);
 }
 
 .link--active:active {
@@ -970,10 +970,10 @@ h3 {
 }
 
 .copy:active {
-	color: var(--green);
+	color: var(--darkOrange);
 }
 
 .btn:active {
 	transform: translate(2px, 2px) scale(0.98);
-	background: linear-gradient(113.96deg, #4b9200 1.49%, #4b9200 101.44%);
+	background: linear-gradient(113.96deg, #a46818 1.49%, #a46818 101.44%);
 }

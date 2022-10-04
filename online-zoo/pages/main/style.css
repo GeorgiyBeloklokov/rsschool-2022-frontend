@@ -1414,6 +1414,6 @@
 }
 
 .feed__link:active {
-	color: var(--green);
-	border-bottom: 1px solid var(--green);
+	color: var(--darkOrange);
+	border-bottom: 1px solid var(--darkOrange);
 }

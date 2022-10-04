@@ -295,13 +295,13 @@
 }
 
 .donation__form-amount:focus {
-	border-color: var(--green);
-	color: var(--green);
-	outline: 1px solid var(--green);
+	border-color: var(--darkOrange);
+	color: var(--darkOrange);
+	outline: 1px solid var(--darkOrange);
 }
 
 .donation__form-amount:focus + .donation__form-amount-span:before {
-	color: var(--green);
+	color: var(--darkOrange);
 }
 
 .donation__form-amount::placeholder {
@@ -365,7 +365,7 @@ input[type='number'] {
 	height: 18px;
 	left: -25px;
 	top: 0;
-	background: var(--green);
+	background: var(--darkOrange);
 	position: absolute;
 	border-radius: 50%;
 	z-index: 10;
@@ -851,5 +851,5 @@ input[type='number'] {
 }
 
 .donation__form label:active {
-	color: var(--green);
+	color: var(--darkOrange);
 }
