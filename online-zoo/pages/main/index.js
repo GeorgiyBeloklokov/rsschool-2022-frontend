@@ -1,21 +1,61 @@
-// Adaptive menu
-const toggleBtn = document.querySelector('.toggle');
-const nav = document.querySelector('.nav');
-const navList = document.querySelector('.nav-list');
-const navItems = document.querySelectorAll('.nav-item');
+window.addEventListener('load', () => {
+	const headerBurger = document.querySelector('.header-burger');
+	const burgerNav = document.querySelector('.burger-nav');
+	const burgerNavLinks = document.querySelectorAll('.burger-nav__link');
 
-function switchMenu() {
-  toggleBtn.classList.toggle('collapsed');
-  nav.classList.toggle('collapsed');
-  navList.classList.toggle('collapsed');
-}
-toggleBtn.addEventListener('click', switchMenu);
+	burgerNavLinks.forEach((item) => {
+		item.addEventListener('click', () => {
+			let anim = burgerNav.animate(
+				[
+					{
+						opacity: 1,
+						transform: 'translateX(0%)',
+					},
+					{
+						opacity: 0,
+						transform: 'translateX(100%)',
+					},
+				],
+				{
+					duration: 500,
+				}
+			);
+			headerBurger.classList.remove('active--button');
 
-function closeMenu() {
-  setTimeout(() => {
-    toggleBtn.classList.remove('collapsed');
-    nav.classList.remove('collapsed');
-    navList.classList.remove('collapsed');
-  }, 1000);  
-}
-navItems.forEach(el => el.addEventListener('click', closeMenu));
+			anim.addEventListener('finish', () => {
+				burgerNav.classList.remove('active--nav');
+				document.documentElement.classList.remove('_lock');
+			});
+		});
+	});
+
+	headerBurger.addEventListener('click', (e) => {
+		if (headerBurger.classList.contains('active--button')) {
+			let anim = burgerNav.animate(
+				[
+					{
+						opacity: 1,
+						transform: 'translateX(0%)',
+					},
+					{
+						opacity: 0,
+						transform: 'translateX(100%)',
+					},
+				],
+				{
+					duration: 500,
+				}
+			);
+			headerBurger.classList.remove('active--button');
+
+			anim.addEventListener('finish', () => {
+				burgerNav.classList.remove('active--nav');
+				document.documentElement.classList.remove('_lock');
+			});
+		} else {
+			burgerNav.classList.add('active--nav');
+			headerBurger.classList.toggle('active--button');
+			document.documentElement.classList.add('_lock');
+		}
+	});
+});
