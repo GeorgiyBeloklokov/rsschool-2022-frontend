@@ -1090,6 +1090,13 @@
     overflow: hidden;
     padding: 15px 15px 15px 9px;
   }
+  .testimonials__item-message {
+    margin-left: 6px;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    margin-top: -7px;
+  }
 
   .testimonials__input {
     display: none;
@@ -1114,12 +1121,24 @@
     gap: 92px 29px;
     padding: 0 25px;
   }
+  .testimonials__item-message {
+    margin-left: 6px;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 639px) {
   .pets .container,
   .testimonials .container {
     padding: 0 10px;
+  }
+  .testimonials__item-message {
+    margin-left: 6px;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
   }
 }
 
@@ -1291,6 +1310,9 @@
 
   .testimonials__item-message {
     margin-left: 6px;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
   }
 
   .testimonials__btn {
