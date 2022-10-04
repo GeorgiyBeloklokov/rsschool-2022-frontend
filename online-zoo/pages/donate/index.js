@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
 					},
 				],
 				{
-					duration: 500,
+					duration: 200,
 				}
 			);
 			headerBurger.classList.remove('active--button');
@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
 					},
 				],
 				{
-					duration: 500,
+					duration: 200,
 				}
 			);
 			headerBurger.classList.remove('active--button');

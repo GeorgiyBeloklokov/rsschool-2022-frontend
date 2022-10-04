@@ -935,7 +935,7 @@ h3 {
 
 	.footer__link:hover {
 		opacity: 0.8;
-		color: #4b9200;
+		color: --darkOrange;
 	}
 
 	.footer__designed-link:hover {
