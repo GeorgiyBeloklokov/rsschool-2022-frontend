@@ -340,6 +340,10 @@ h3 {
   height: 21px;
 }
 
+.logo__link:hover {
+  color:darkOrange;
+}
+
 .burger-nav {
   display: none;
   opacity: 0;
