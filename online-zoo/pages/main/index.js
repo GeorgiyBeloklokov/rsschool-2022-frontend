@@ -185,7 +185,7 @@ window.addEventListener('load', () => {
           opacity: 1,
         },
       ],
-      { duration: 500 }
+      { duration: 100 }
     );
 
     document.documentElement.classList.add('_lock');
@@ -201,7 +201,7 @@ window.addEventListener('load', () => {
           opacity: 0,
         },
       ],
-      { duration: 500 }
+      { duration: 100 }
     );
 
     anim.addEventListener('finish', (e) => {

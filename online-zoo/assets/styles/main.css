@@ -644,8 +644,8 @@ h3 {
 
   .burger-nav__inner {
     padding: 10px;
-    background-color: #fff;
-    width: 50%;
+    background-color:#ffffffe6;
+    width: 70%;
     min-height: 100vh;
     cursor: auto;
   }

@@ -1076,7 +1076,7 @@
 
   .favorite {
     min-height: 339px;
-    background-image: url('../../assets/images/favoriteBg_tablet.jpg');
+    background-image: url('../../assets/images/GiantPanda_tablet.jpg');
     background-size: cover;
   }
 
@@ -1166,6 +1166,13 @@
     padding: 15px 15px 15px 9px;
     cursor: pointer;
     transition: all 0.3s ease;
+  }
+
+  .testimonials__item-message {
+    line-height: 1.3em;
+    height: 2.8em;      
+    overflow: hidden;
+    margin-top: -6px;
   }
 
   .testimonials__item * {
@@ -1366,6 +1373,11 @@
 
   .testimonials__item-message {
     margin-left: 6px;
+    
+      line-height: 1.3em;
+      height: 2.8em;      
+      overflow: hidden;
+      margin-top: 0px;
   }
 
   .testimonials__btn {
@@ -1385,7 +1397,7 @@
 
   .favorite {
     min-height: 186px;
-    background-image: url('../../assets/images/favoriteBg_mobile.jpg');
+    background-image: url('../../assets/images/GiantPanda_mobile.jpg');
     background-size: cover;
   }
 
@@ -1418,18 +1430,17 @@
     padding-top: 105px;
     background-size: 62px;
     background-position: top 35px right -30px;
+    background: #ffffff;
   }
 
   .backstage__info-title {
     font-size: 24px;
     margin-left: 0;
     margin-bottom: 0;
-    max-width: 330px;
   }
 
   .backstage__info .descr {
     margin-top: 10px;
-    max-width: 300px;
   }
 
   .backstage__info-subtitle {
@@ -1444,6 +1455,11 @@
 
   .backstage__info .backstage__info-descr {
     line-height: 137%;
+  }
+
+  .backstage__inner {
+    text-align: center;
+    justify-content: center;
   }
 
   .pets__inner {
