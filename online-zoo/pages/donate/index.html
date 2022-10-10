@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Online-Zoo</title>
   </head>
+  
 <body>
   <div class="wrapper">
     <header class="header" id="header">
@@ -23,22 +24,24 @@
             <span></span>
           </button>
           <nav class="burger-nav">
-            <h1 class="logo burger-nav__logo">
-              <a href="index.html" class="logo__link">
-                PetStory online
-              </a>
-            </h1>
-            <ul class="burger-nav__list">
-              <li class="burger-nav__item"><a href="../main/index.html" class="burger-nav__link">About</a></li>
-              <li class="burger-nav__item"><a href="#" class="burger-nav__link">Map</a></li>
-              <li class="burger-nav__item"><a href="#" class="burger-nav__link">Zoos</a></li>
-              <li class="burger-nav__item"><a href="../donate/index.html" class="burger-nav__link">Donate</a></li>
-              <li class="burger-nav__item"><a href="#" class="burger-nav__link">Contact us</a></li>
-              <li class="burger-nav__item">
-                <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank"
-                  class="copy nav__link">Designed by ©</a>
-              </li>
-            </ul>
+            <div class="burger-nav__inner">
+              <h1 class="logo burger-nav__logo">
+                <a href="index.html" class="logo__link">
+                  PetStory online
+                </a>
+              </h1>
+              <ul class="burger-nav__list">
+                <li class="burger-nav__item"><a href="../main/index.html" class="burger-nav__link">About</a></li>
+                <li class="burger-nav__item"><a href="#" class="burger-nav__link">Map</a></li>
+                <li class="burger-nav__item"><a href="#" class="burger-nav__link">Zoos</a></li>
+                <li class="burger-nav__item"><a href="../donate/index.html" class="burger-nav__link">Donate</a></li>
+                <li class="burger-nav__item"><a href="#" class="burger-nav__link">Contact us</a></li>
+                <li class="burger-nav__item">
+                  <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank"
+                    class="copy nav__link">Designed by ©</a>
+                </li>
+              </ul>
+            </div>
           </nav>
           <h1 class="logo  main--logo">
             <a href="index.html" class="logo__link">
@@ -93,16 +96,16 @@
                   <span class="donation__amount-point"></span>
                 </button>
                 <button class="donation__amount-button">
+                  <span class="donation__amount-point"></span>
+                </button>
+                <button class="donation__amount-button">
+                  <span class="donation__amount-point"></span>
+                </button>
+                <button class="donation__amount-button">
+                  <span class="donation__amount-point"></span>
+                </button>
+                <button class="donation__amount-button">
                   <span class="donation__amount-point point--active"></span>
-                </button>
-                <button class="donation__amount-button">
-                  <span class="donation__amount-point"></span>
-                </button>
-                <button class="donation__amount-button">
-                  <span class="donation__amount-point"></span>
-                </button>
-                <button class="donation__amount-button">
-                  <span class="donation__amount-point"></span>
                 </button>
                 <button class="donation__amount-button">
                   <span class="donation__amount-point"></span>
@@ -114,10 +117,10 @@
               <div class="donation__amount-bucks">
                 <div class="donation__amount-dollar">$5000</div>
                 <div class="donation__amount-dollar">$2000</div>
-                <div class="donation__amount-dollar dollar--active">$1000</div>
+                <div class="donation__amount-dollar">$1000</div>
                 <div class="donation__amount-dollar">$500</div>
                 <div class="donation__amount-dollar">$250</div>
-                <div class="donation__amount-dollar">$100</div>
+                <div class="donation__amount-dollar dollar--active">$100</div>
                 <div class="donation__amount-dollar">$50</div>
                 <div class="donation__amount-dollar">$25</div>
               </div>
@@ -126,6 +129,7 @@
               <div class="donation__form-amount-block">
                 <input type="number" class="donation__form-amount" placeholder="Another amount" min="0"
                   data-maxlength="4">
+                  <span class="donation__form-amount-span">$</span>
               </div>
               <div class="donation__form-subs">
                 <div>
@@ -201,7 +205,7 @@
           </ul>
           <nav class="nav footer5">
             <ul class="nav__list">
-              <li class="nav__item"><a href="../main/index.html" class="nav__link link--active">About</a></li>
+              <li class="nav__item"><a href="../main/index.html" class="nav__link">About</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Map</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Zoos</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
