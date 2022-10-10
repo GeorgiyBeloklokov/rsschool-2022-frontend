@@ -282,8 +282,7 @@
   max-height: 56px;
 }
 
-.donation__form-amount-block:before {
-  content: '$';
+.donation__form-amount-span {
   display: inline-block;
   position: absolute;
   font-size: 24px;
@@ -292,6 +291,7 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  transition: all 0.3s ease;
 }
 
 .donation__form-amount:focus {
