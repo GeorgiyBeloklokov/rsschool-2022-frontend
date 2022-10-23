@@ -55,7 +55,7 @@ export default class GemPuzzle {
 
     this.mainContainer = mainContainer;
     this.soundButton = soundButton;
-    this.soundButton.style.backgroundImage = 'url(./assets/images/mute-onn.png)';
+    this.soundButton.style.backgroundImage = 'url(./assets/images/mute-on.png)';
 
     document.body.append(this.mainContainer);
     document.body.append(soundButton);
@@ -313,9 +313,9 @@ export default class GemPuzzle {
     this.soundButton.addEventListener('click', () => {
       this.sound = !this.sound;
       if (this.sound == true) {
-        this.soundButton.style.backgroundImage = 'url(../assets/images/mute-onn.png)';
+        this.soundButton.style.backgroundImage = 'url(../assets/images/mute-on.png)';
       } else {
-        this.soundButton.style.backgroundImage = 'url(../assets/images/mute-offf.png)';
+        this.soundButton.style.backgroundImage = 'url(../assets/images/mute-off.png)';
       }
     });
   }
