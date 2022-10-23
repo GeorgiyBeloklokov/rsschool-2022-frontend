@@ -116,6 +116,6 @@ let conf = {
 
 module.exports = (env, options) => {
     let production = options.mode === 'production';
-    conf.devtool = production ? 'nosources-source-map' : 'source-map';
+    conf.devtool = production ? false : 'source-map';
     return conf;
 };
