@@ -50,7 +50,7 @@ export default class SaveGame {
     container.append(labelPopup);
     let text = document.createElement('p');
     text.classList.add('text-container');
-    text.innerText = string ?? '0';
+    text.innerText = string ?? 'You need save any game';
     container.append(text);
     popup.append(container);
     return popup;
