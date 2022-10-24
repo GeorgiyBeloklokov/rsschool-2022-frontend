@@ -120,6 +120,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 10;
+  cursor: pointer;
 }
 
 .button--show {
@@ -222,6 +223,7 @@ body {
   margin: 0 0 5px 8px;
   text-decoration: underline;
   color: #2a75bb;
+  cursor: pointer;
 }
 
 

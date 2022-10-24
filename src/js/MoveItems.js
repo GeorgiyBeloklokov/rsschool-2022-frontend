@@ -70,7 +70,8 @@ export default class MoveItems{
         return this.step;
     }
 
-    dragAndDrop(){
+    dragAndDrop() {
+        
         this.setTargetCoord();
         this.setZeroCoord();
         let deltaX = Math.abs(this.zeroCoord.x - this.targetCoord.x);

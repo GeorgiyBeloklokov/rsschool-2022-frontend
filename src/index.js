@@ -71,6 +71,7 @@ export default class GemPuzzle {
   startGame() {
     this.createGameField(this.itemCount);
     this.replaceItems();
+    this.dragAndDrop();
     this.setTime();
     this.setStepCount();
   }
@@ -233,6 +234,34 @@ export default class GemPuzzle {
             });
           }
         }
+      });
+    });
+  }
+  dragAndDrop() {
+    this.puzzleItems.forEach((element) => {
+      element.addEventListener('dragleave', (e) => {
+        let targetButton = e.target;
+         if (!targetButton.classList.contains('empty')) {
+          let zero = document.querySelector('.empty');
+          let dragAction = new MoveItems(targetButton, zero);
+          dragAction.dragAndDrop();
+           this.step =  this.step + 1;
+          this.setStepCount();
+          let validation = new Validation(this.puzzleItems, this.itemCount);
+          let result = validation.validation();
+          if (result === true) {
+            this.puzzleContainer.remove();
+            this.toggleGameButtonHide();
+            let winNotice = new Win(this.gameTime, this.step);
+            let winNoticeContainer = winNotice.createWinNotice();
+            document.body.append(winNoticeContainer);
+            winNoticeContainer.addEventListener('click', () => {
+              winNoticeContainer.remove();
+              this.itemCount = '4';
+              this.puzzleItems = [];
+            });
+          }
+        } 
       });
     });
   }
