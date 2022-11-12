@@ -298,7 +298,7 @@ html {
   .header {
     position: relative;
     z-index: 10;
-    background: var(--black);
+    background: #24362f;
     backdrop-filter: blur(2px);
     color: #fff;
     padding-top: 14px;
@@ -386,7 +386,7 @@ html {
   .nav__list {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
   }
   

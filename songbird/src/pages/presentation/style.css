@@ -1393,6 +1393,7 @@
 @media (max-width: 480px) {
   .popup {
     overflow: auto;
+    
   }
 
   .favorite {
@@ -1489,6 +1490,7 @@
     top: -10px;
     right: -25px;
   }
+  
 }
 
 @media (hover: hover) {
@@ -1519,6 +1521,7 @@
   }
 }
 
+
 .feed__link:active {
   color: var(--green);
   border-bottom: 1px solid var(--green);
@@ -1526,10 +1529,8 @@
 
 .footer__year{
   font-size: 21px;
-  letter-spacing: -2px;
-  line-height: 0.9;
   font-weight: bold;
-  transition: 0.3s;
+  
 }
 
 
@@ -1538,9 +1539,21 @@
   height: 40px;
 }
 
+@media(max-width: 450px ){
+  .footer__link-img{
+    height: 2vh;
+    /* padding-top: 10px; */
+    
+  }
+  .footer__designed span {
+    /* display: block; */
+    margin-top: 10px;
+}
+}
+
 .footer__year:hover {
-  right: -5px;
-  letter-spacing: 0;
+  color: darkOrange;
+  opacity: 0.8
 }
 
 @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
@@ -1564,11 +1577,6 @@
   font-family:  Verdana, sans-serif, serif,sans-serif;
   color: black;
   font-size: 1.125rem;
-   /*letter-spacing: 1px;
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6); */
-  /* position: relative; */
-  /* z-index: 3; */
-
 }
 
 .container-for-bird {
