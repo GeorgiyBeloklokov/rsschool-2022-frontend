@@ -398,7 +398,7 @@ html {
   .footer {
     background: #24362f;
     padding-top: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 77px;
     color: #fff;
   }
   
@@ -870,6 +870,7 @@ html {
   
     .footer {
       padding-bottom: 23px;
+      
     }
   
     /* .footer__inner {
