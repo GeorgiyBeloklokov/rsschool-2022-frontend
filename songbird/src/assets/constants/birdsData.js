@@ -1,4 +1,5 @@
-const birdsData = [
+export const birdTypes = ['Разминка', 'Воробьиные', 'Лесные птицы', 'Певчие птицы', 'Хищные птицы', 'Морские птицы'];
+export const  birdsData = [
     [       
       {
         id: 1,
@@ -301,4 +302,3 @@ const birdsData = [
     ]
   ];
   
-  export default birdsData;

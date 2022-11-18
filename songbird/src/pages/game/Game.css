@@ -1,0 +1,54 @@
+.game-window {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.next-button {
+  width: 100%;
+  padding: 1% 0;
+  color: white;
+  background-color: #303030;
+  border: 1px solid #555555;
+  border-radius: 8px;
+  margin: 1% 0;
+  font-size: 14px;
+}
+
+.next-button-correct {
+  background-color: #00bc8c;
+}
+
+.congrats-window {
+  background-color: #303030;
+  border: 1px solid #555555;
+  margin: 2% 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 400;
+  color: #fff;
+}
+.congrats-window hr {
+  height: 1px;
+  border: none;
+  background-color: #555555;
+}
+
+.congrats {
+  font-size: 32px;
+}
+
+.congrats-image {
+  width: 300px;
+}
+
+.congrats-button {
+  padding: 15px;
+  margin: 25px 0;
+  width: 80%;
+  font-size: 18px;
+  color: white;
+  background-color: #00bc8c;
+  border: none;
+  border-radius: 8px;
+}/*# sourceMappingURL=Game.css.map */

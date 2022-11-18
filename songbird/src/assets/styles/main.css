@@ -146,7 +146,7 @@ html {
   }
   /* normalize.css */
   
-  @font-face {
+  /* @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
       url('../fonts/Roboto-Regular.woff') format('woff');
@@ -198,7 +198,7 @@ html {
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-  }
+  } */
   
   :root {
     --feed: #fe9013;
@@ -334,7 +334,7 @@ html {
     z-index: -1;
     bottom: 8px;
     left: 9px;
-    background-image: url('.././icons//bamboo.svg');
+   /*  background-image: url('.././icons//bamboo.svg'); */
     background-repeat: no-repeat;
     width: 12px;
     height: 21px;
@@ -398,7 +398,7 @@ html {
   .footer {
     background: #24362f;
     padding-top: 40px;
-    padding-bottom: 77px;
+    padding-bottom: 81px;
     color: #fff;
   }
   
@@ -665,9 +665,9 @@ html {
       border-color: var(--feed);
     }
   
-    .burger-nav__logo .logo__link:before {
+    /* .burger-nav__logo .logo__link:before {
       background-image: url('../../assets/icons/bamboo_orange.svg');
-    }
+    } */
   
     .burger-nav__list {
       padding-left: 0;

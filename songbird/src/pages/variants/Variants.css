@@ -1,0 +1,44 @@
+.variants-block {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: left;
+  font-size: 18px;
+}
+.variants-block li {
+  padding: 2% 0;
+  position: relative;
+  display: block;
+  color: white;
+  background-color: #303030;
+  border: 1px solid #555555;
+  cursor: pointer;
+}
+.variants-block li .dot {
+  padding: 0 3%;
+}
+.variants-block li .dot-wrong {
+  padding: 0 3%;
+  color: red;
+}
+.variants-block li .dot-correct {
+  padding: 0 3%;
+  color: greenyellow;
+}
+.variants-block li:first-child {
+  border-radius: 8px 8px 0 0;
+}
+.variants-block li:last-child {
+  border-radius: 0 0 8px 8px;
+}
+.variants-block li:hover {
+  background-color: #444444;
+}
+
+@media screen and (max-width: 850px) {
+  .variants-block {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Variants.css.map */
