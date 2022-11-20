@@ -1,8 +1,3 @@
-
-/*import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-import birdDefault from '../../assets/default.png'; */
-
 export default class Bird {
   constructor(birdName, correct) {
     this.birdName = birdName;

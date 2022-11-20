@@ -7,6 +7,7 @@ import win from '../../assets/win.JPG'; */
 
 import Bird from "../bird/Bird.js";
 import Variants from "../variants/Variants.js";
+import Description from "../description/Description.js";
 
 export default class Game {
   constructor(nextLevel, checkAnswer, resetGame, endGame, score, bird, variants, correct, startGame, userAnswer, roundClear) {
@@ -24,7 +25,7 @@ export default class Game {
   }
 
   init() {
-    /* console.log(this.bird); */
+    
     let show;
     if (this.endGame === false) {
       show = new GameWindow (this.bird, this.variants, this.correct, this.startGame, this.userAnswer, this.roundClear, this.nextLevel, this.checkAnswer);
@@ -49,7 +50,8 @@ export class GameWindow {
         this.userAnswer = userAnswer;
         this.roundClear = roundClear;
         this.nextLevel = nextLevel;
-        this.checkAnswer = checkAnswer;
+      this.checkAnswer = checkAnswer;
+      
       }
   init() {
     
@@ -70,13 +72,14 @@ export class GameWindow {
       <button onClick={this.props.nextLevel} className={`next-button ${correct ? 'next-button-correct' : ''}`}>
         Next
       </button> */}
-    this.getAll();
+    this.getVariants();
+    this.getDescription();
       let bird = new Bird(this.birdName, this.correct);
       return bird.init();
    /*  }); */
   }
 
-  getAll() {
+  getVariants() {
     window.addEventListener('DOMContentLoaded', (_event) => {
       let getVariants = new Variants(this.variants, this.roundClear, this.checkAnswer);
       let gameWindow = document.querySelector('.game-window');
@@ -85,17 +88,27 @@ export class GameWindow {
 
     });
   }
+
+  getDescription() {
+    window.addEventListener('DOMContentLoaded', (_event) => {
+      let getDescript = new Description(this.variants, this.userAnswer, this.startGame);
+      let gameWindow = document.querySelector('.game-window');
+      gameWindow.appendChild(getDescript.init());
+
+
+    });
+    
+  }
  
 }
 
 
 export class CongratsWindow {
   constructor(score, resetGame) {
-    this.score - score;
-    this.resetGame - resetGame;
+    this.score = score;
+    this.resetGame = resetGame;
   }
   init() {
-    
     /* if (this.score === 30) {
       return (
         <div className="congrats-window">
@@ -120,5 +133,5 @@ export class CongratsWindow {
         </div>
       );
     } */
-  } 
+  }
 }

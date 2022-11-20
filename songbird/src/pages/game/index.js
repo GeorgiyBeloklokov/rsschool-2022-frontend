@@ -19,8 +19,8 @@ export default class SongBird {
     this.bird = {};
     this.answer = 0;
     this.variants = [];
-    this.userAnswer = 6;
-
+    this.userAnswer = 0;
+    
     this.baseState = this.state;
     this.createGame = this.createGame.bind(this);
     this.nextLevel = this.nextLevel.bind(this);
@@ -28,15 +28,20 @@ export default class SongBird {
     this.resetGame = this.resetGame.bind(this);
   }
 
+  setStartGame(name = false) {
+    
+    this.startGame = name;
+    
+  }
+  
+  getStartGame() {
+    return this.startGame;
+  }
+ 
   createGame() {
-    
-    
-    /* const header = new Header(this.state.category, this.state.score, this.nextLevel);
-    header.init(); */
-    
+
     if (this.category < 6) {
       let variants = this.shuffle(birdsData[this.category]);
-      /* console.log(`variants`, variants); */
       let answer = randomNumber(0, 5);
       let bird = variants[answer];
 
@@ -59,21 +64,16 @@ export default class SongBird {
       this.bird,
       this.variants,
       this.correct,
-      this.startGame,
+      this.startGame ,
       this.userAnswer,
       this.roundClear
     );
-
-
+    
     let wrapper = document.querySelector('.main');
     wrapper.appendChild(game.init());
     let div = document.createElement('div');
     div.classList.add('game-window');
     wrapper.append(div);
-    
-    
-
-
   } 
 
   resetGame() {
@@ -87,7 +87,7 @@ export default class SongBird {
     this.bird = {};
     this.answer = 0;
     this.variants = [];
-    this.userAnswer = 6;
+    this.userAnswer = 0;
 
     this.baseState = this.state;
     this.createGame = this.createGame.bind(this);
@@ -99,35 +99,39 @@ export default class SongBird {
   }
 
   nextLevel() {
-    if (this.state.correct) {
-      this.category = this.state.category + 1;
+    if (this.correct) {
+      this.category = this.category + 1;
       this.correct = false;
       this.startGame = false;
       this.points = 5;
-      this.userAnswer = 6;
+      this.userAnswer = 0;
       this.roundClear = true;
 
-      this.createGame(this.state.category);
+      this.createGame(this.category);
     }
+    
   }
 
   checkAnswer(answer, e) {
+   
+    this.setStartGame(true);
+
     this.startGame = true;
     this.userAnswer = answer;
-
-    if (this.state.correct) {
-    } else if (this.state.answer === answer) {
+    
+    if (this.correct) {
+    } else if (this.answer === answer) {
       e.target.firstChild.className = 'dot dot-correct';
 
       this.correct = true;
-      this.startGame - true;
-      this.score = this.state.score + this.state.points;
+      this.startGame = true;
+      this.score = this.score + this.points;
 
       return playAudio('../../assets/sound/correct.mp3');
     } else {
       e.target.firstChild.className = 'dot dot-wrong';
-      if (this.state.points > 0) {
-        this.points = this.state.points - 1;
+      if (this.points > 0) {
+        this.points = this.points - 1;
       }
       return playAudio('../../assets/sound/wrong.mp3');
     }
