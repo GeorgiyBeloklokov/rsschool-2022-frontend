@@ -1,26 +1,42 @@
+
+
 export default class Description {
   constructor(variants, userAnswer, startGame) {
     this.variants = variants;
     this.userAnswer = userAnswer;
-    this.startGame = false;
+    this.startGame = startGame;
+    
+    this.setStartGame = this.setStartGame.bind(this);
   }
 
-  setStartGame(name = false) {
-    console.log('wock ');
-    this.startGame = name;
-    console.log(`this.startGame2:`, this.startGame);
+  setStartGame() {
+    console.log('work!');
+    this.startGame = true;
+    //console.log(`this.startGame2:`, this.startGame);
   }
+
+  //document.querySelector(".setting-conteiner").remove();
 
   init() {
-    console.log(`this.startGame:`, this.startGame);
-    let variantsBlock = document.querySelector('.variants-block');
-    variantsBlock.addEventListener('click', () => {
-      this.setStartGame(true);
-    });
+     
+    /* let variantsBlock = document.querySelector('.variants-block');
+    variantsBlock.addEventListener("click", (e) => {
+      console.log(`eeeeeeee:`, e.target.firstChild.innerHTML);
+      document.querySelector(".description").remove();
+      description = new Answer(this.variants, this.userAnswer);
+      let gameWindow = document.querySelector('.game-window');
+      gameWindow.appendChild(description.init());
+      
+      
+      
+    }) */
 
+   
+  
+     
+    
     let description;
-
-    if (this.startGame === true) {
+    if (this.startGame === false) {
       description = new Rules();
     } else {
       description = new Answer(this.variants, this.userAnswer);
@@ -28,6 +44,9 @@ export default class Description {
 
     return description.init();
   }
+
+ 
+
 }
 
 export class Rules {
@@ -48,7 +67,7 @@ export class Rules {
   }
 }
 
-export class Answer {
+export  class Answer {
   constructor(variants, userAnswer) {
     this.variants = variants;
     this.userAnswer = userAnswer;
@@ -59,7 +78,7 @@ export class Answer {
     this.image = this.variants[this.userAnswer].image;
     this.description = this.variants[this.userAnswer].description;
     this.audio = this.variants[this.userAnswer].audio;
-    console.log(`this.audio:`, this.variants);
+    //console.log(`this.audio:`, this.variants);
   }
   init() {
     console.log('Answer');

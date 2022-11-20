@@ -5,6 +5,7 @@ export default class Variants {
     this.checkAnswer = checkAnswer;
   }
   init() {
+    console.log()
     let ul = document.createElement('ul');
     ul.classList.add('variants-block');
     document.body.append(ul);

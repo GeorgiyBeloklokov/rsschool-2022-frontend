@@ -6,6 +6,8 @@ import playAudio from '../../helpers/playAudio.js';
 /* import {correct} from '../../assets/sound/correct.mp3';
 import {wrong} from '../../assets/sound/wrong.mp3'; */
 import randomNumber from '../../assets/constants/randomNumber.js';
+import { Answer } from '../description/Description.js';
+
 
 export default class SongBird {
   constructor() {
@@ -28,18 +30,13 @@ export default class SongBird {
     this.resetGame = this.resetGame.bind(this);
   }
 
-  setStartGame(name = false) {
-    
-    this.startGame = name;
-    
-  }
   
-  getStartGame() {
-    return this.startGame;
-  }
  
   createGame() {
-
+    
+    //console.log(`this.userAnswer:`, this.userAnswer);
+      //console.log(`index - startGame`,this.startGame);
+    
     if (this.category < 6) {
       let variants = this.shuffle(birdsData[this.category]);
       let answer = randomNumber(0, 5);
@@ -54,7 +51,7 @@ export default class SongBird {
     } else {
       this.endGame = true;
     };
-
+    
     const game = new Game(
       this.nextLevel,
       this.checkAnswer,
@@ -113,12 +110,17 @@ export default class SongBird {
   }
 
   checkAnswer(answer, e) {
-   
-    this.setStartGame(true);
-
-    this.startGame = true;
+   this.startGame = true;
     this.userAnswer = answer;
+    const description = new Answer(this.variants, this.userAnswer);
+    document.querySelector(".description").remove();
     
+    let gameWindow = document.querySelector('.game-window');
+    gameWindow.appendChild(description.init());
+
+
+    /* console.log(`this.userAnswer1:`, this.userAnswer);
+    console.log(`this.variants:`, this.variants); */
     if (this.correct) {
     } else if (this.answer === answer) {
       e.target.firstChild.className = 'dot dot-correct';

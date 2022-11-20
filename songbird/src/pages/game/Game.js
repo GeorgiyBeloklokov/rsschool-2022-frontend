@@ -1,10 +1,3 @@
- 
-/* import './Game.scss'; */
-/* import Bird from '../Bird/Bird'
-import Variants from '../Variants/Variants';
-import Description from '../Description/Description';
-import win from '../../assets/win.JPG'; */
-
 import Bird from "../bird/Bird.js";
 import Variants from "../variants/Variants.js";
 import Description from "../description/Description.js";
@@ -55,15 +48,6 @@ export class GameWindow {
       }
   init() {
     
-    /* window.addEventListener('DOMContentLoaded', (_event) => {
-    let gameWindow = document.querySelector('.game-window');
-    console.log(`gameWindow`, gameWindow); */
-    /* wrapper.appendChild(variants.init());
-    let div = document.createElement('div');
-    div.classList.add('game-window');
-    wrapper.append(div); */
-    
-    
       
       {/* <div className="game-window">
         <Variants variants={variants} roundClear={roundClear} checkAnswer={this.props.checkAnswer} />
@@ -99,6 +83,7 @@ export class GameWindow {
     });
     
   }
+
  
 }
 
