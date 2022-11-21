@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "set NODE_ENV=production && webpack",
+    "build": "set NODE_ENV=production \"GENERATE_SOURCEMAP=false\" && webpack", 
     "start": "webpack serve --port 8080 --mode development",
     "dev": "webpack serve",
     "watch": "webpack serve --watch"

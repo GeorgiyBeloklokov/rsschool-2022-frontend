@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicLover</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header_wrap wrapper" id="header">
+            <a href="../main/index.html" class="burger_logo"><img src="../../assets/images/logo.svg" alt="logo" width="30"></a>
+            <a href="../main/index.html" class="logo"><img src="../../assets/images/logo.svg" alt="logo"  width="60">Song bird</a>
+            <div class="header_wrap_list">
+              <ul>
+               <li class="active"><a href="../main/index.html" class="link">Главная</a></li>
+               <li class="active"><a href="../victorine/index.html" class="link">Викторина</a></li>
+               <li class="active"><a href="../gallery/index.html" class="link">Галерея</a></li>
+               <li class="active" id="change_lang">En</li>
+              </ul>
+            </div>
+           <img src="../../assets/images/burger_menu (1).png" alt="burger" class="burger_menu">
+           <div class="hidden_menu">
+            <div class="hidden_menu_list">
+                <ul class="list_menu">
+                    <li class="active logo_li"><img src="../../assets/images/logo.svg" alt="logo" width="40"><a href="../main/index.html">Song bird</a></li>
+                    <li class="active"><a href="../main/index.html"  class="link">Главная</a></li>
+                    <li class="active"><a href="../victorine/index.html"  class="link">Викторина</a></li>
+                    <li class="active"><a href="../gallery/index.html"  class="link">Галерея</a></li>
+                </ul>
+                <button type="button" class="close_btn">x</button>
+            </div>
+           </div>
+        </div>
+      </header>
+    <main class="main">
+      <div class=" wrapper">
+        <div class="main__header">
+          <ul class="main__header_list"></ul>
+        </div>
+        <div class="main__top">
+          <section class="main__question">
+            <img src="../../assets/images/bird-skeleton1.jpg" alt="img" class="main__question_img">
+            <div class="main__right">
+              <p class="main__right__text">********</p>
+            </div>
+          </section>
+          <section class="main__score">
+            <p class="main__score_text">Очки: </p>
+            <p class="main__score_total">0</p>
+          </section>
+        </div>
+       <div class="main__bot">
+          <section class="main__answers">
+             <p class="main__answers_text">Варианты ответа: </p>
+             <ul class="main__answers_list">
+             </ul>
+          </section>
+          <section class="main__show">
+           <p class="main__show_preview">Послушайте плеер.
+            Выберите птицу из списка.</p>
+           <button type="button" class="main__show_next-btn" disabled>Следующий вопрос</button>
+          </section>
+       </div>
+      </div>
+    </main>         
+    <footer class="footer">
+      <div class="footer_wrap wrapper">
+        <div class="footer_wrap_media">
+            <ul class="social_list">
+                <li><div><a href="https://rs.school/js/" class="link2"><img src="../../assets/images/rs_school_js.svg" alt="icon" width="25"></a></div><a href="https://rs.school/js/" class="link">RSSchool</a></li>
+                <li><div><a href="https://github.com/GeorgiyBeloklokov" class="link2"><img src="../../assets/images/github.svg" alt="icon" width="20"></a></a></div><a href="https://github.com/GeorgiyBeloklokov" class="link">Github</a></li>
+                <!-- <li><div><a href="https://www.instagram.com" class="link2"><img src="../../assets/icons/Fill 166.png" alt="icon" ></a></div><a href="https://www.instagram.com/loginovsky_max/" class="link">Instagram</a></li>
+                <li><div><a href="https://www.youtube.com" class="link2"><img src="../../assets/icons/discord__logo.png" alt="icon" width="20"></a></div><a href="https://discord.com/invite/PRADsJB" class="link">Discord</a></li> -->
+            </ul>
+            <ul class="footer_wrap_list">
+                <li class="active_footer"><a href="#header"" class="link-footer">Главная</a></li>
+                <li class="active_footer"><a href="../gallery/index.html" class="link-footer">Галерея</a></li>
+                <li class="active_footer"><a href="../victorine/index.html" class="link-footer">Викторина</a></li>
+            </ul>
+            <div class="footer_wrap_email_design">
+                <p>Georgiy Beloklokov</p>
+                <p>©RSSchool 2022</p>
+             </div>
+        </div>
+        <div class="footer_wrap_email">
+            <form action="../victorine/index.html" class="form1">
+                <a href="#header" class="logo"><img src="../../assets/images/logo.svg" alt="logo" width="60"></a>
+                <a href="#header" class="logo3"><img src="../../assets/images/logo.svg" alt="logo" width="30"></a>
+                <button type="submit" class="footer_btn">Пройти викторину</button>
+            </form>
+            <div class="right_form">
+              <a href="https://rs.school/js/"  target="_blank" ><img  src="../../assets/images/rs_school_js.svg" alt="100" width="100"></a>
+                <!-- <p class="footer_wrap_email_text">Подпишитесь на новые викторины</p>
+             <form class="form2">
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <button type="submit" class="inp_btn">Подтвердить</button> -->
+             </form>
+        </div>
+      </div>
+   </div>
+  </footer>
+    <script src="index.js"></script>
+</body>
+</html>
