@@ -8,7 +8,7 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 module.exports = {
     mode: "production",
     entry: {
-        main: path.resolve(__dirname, './src/index.js'),
+        main: path.resolve(__dirname, './src/pages/main/index.js'),
     },
     performance: {
       hints: false
@@ -95,7 +95,7 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             title: 'Game-Puzzle',
-            template: path.resolve(__dirname, './src/index.html'),
+            template: path.resolve(__dirname, './src/pages/main/index.html'),
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),

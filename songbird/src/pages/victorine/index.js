@@ -518,8 +518,8 @@ nextBtn.addEventListener('click', () => {
     nextBtn.setAttribute('disabled', true);
   } else {
     window.location.href = '../results/index.html';
-    localStorage.setItem('LoginovskyScore', JSON.stringify(mainScore));
-    localStorage.removeItem('LoginovskyVictorineSettings');
+    localStorage.setItem('SongBirdScore', JSON.stringify(mainScore));
+    localStorage.removeItem('SongBirdVictorineSettings');
   }
   if (currentGenge == 5) {
     if (curLangRus) {
@@ -665,11 +665,11 @@ function changeLangFunc() {
     headerList[3].textContent = 'Главная';
     headerList[1].textContent = 'Викторина';
     headerList[4].textContent = 'Викторина';
-    headerList[2].textContent = 'Галерея';
-    headerList[5].textContent = 'Галерея';
+    headerList[2].textContent = 'Результаты';
+    headerList[5].textContent = 'Результаты';
     footerList[0].textContent = 'Главная';
     footerList[1].textContent = 'Викторина';
-    footerList[2].textContent = 'Галерея';
+    footerList[2].textContent = 'Результаты';
     scorePTag.textContent = 'Очки';
     nextBtn.textContent = 'Следующий вопрос';
     variants.textContent = 'Варианты ответа';
@@ -692,7 +692,7 @@ function changeLangFunc() {
     scorePTag.textContent = 'Score';
     nextBtn.textContent = 'Next question';
     variants.textContent = 'Variants';
-    textPreview.textContent = 'Listen to the player. Select a bird from the list.z`';
+    textPreview.textContent = 'Listen to the player. Select a bird from the list.';
     footerBtn1.textContent = 'Save game';
     footerText.textContent = 'Subscribe to new victorines';
     footerBtn2.textContent = 'Confirm';
@@ -713,7 +713,7 @@ changeLang.addEventListener('click', () => {
 
 function saveToLS(language) {
   if (language) {
-    localStorage.setItem('LoginovskyCurLanguage', JSON.stringify(curLangRus));
+    localStorage.setItem('SongBirdCurLanguage', JSON.stringify(curLangRus));
   } else {
     let obj = {
       curLangRus,
@@ -726,7 +726,7 @@ function saveToLS(language) {
       mainEl,
       wrongAnswersArr,
     };
-    localStorage.setItem('LoginovskyVictorineSettings', JSON.stringify(obj));
+    localStorage.setItem('SongBirdVictorineSettings', JSON.stringify(obj));
   }
 }
 
@@ -734,8 +734,8 @@ footerBtn1.addEventListener('click', () => {
   saveToLS();
 });
 
-if (localStorage.getItem('LoginovskyVictorineSettings')) {
-  let obj = JSON.parse(localStorage.getItem('LoginovskyVictorineSettings'));
+if (localStorage.getItem('SongBirdVictorineSettings')) {
+  let obj = JSON.parse(localStorage.getItem('SongBirdVictorineSettings'));
   curLangRus = obj.curLangRus;
   currentGenge = obj.currentGenge;
   maxScore = obj.maxScore;
@@ -776,8 +776,8 @@ if (localStorage.getItem('LoginovskyVictorineSettings')) {
       nextBtn.textContent = 'Show results';
     }
   }
-} else if (localStorage.getItem('LoginovskyCurLanguage')) {
-  curLangRus = JSON.parse(localStorage.getItem('LoginovskyCurLanguage'));
+} else if (localStorage.getItem('SongBirdCurLanguage')) {
+  curLangRus = JSON.parse(localStorage.getItem('SongBirdCurLanguage'));
   changeLangFunc();
   createAudio(randomSong(), conteiner, 'player', audio1);
 } else {

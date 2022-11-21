@@ -73,32 +73,32 @@ let footerText = document.querySelector('.footer_wrap_email_text')
 let footerBtn2 = document.querySelector('.inp_btn')
 let mainText = document.querySelector('.main__text')
 
-if(localStorage.getItem('LoginovskyCurLanguage')){
-    curLangRus = JSON.parse(localStorage.getItem('LoginovskyCurLanguage'))
+if(localStorage.getItem('SongBirdCurLanguage')){
+    curLangRus = JSON.parse(localStorage.getItem('SongBirdCurLanguage'))
     changeLangFunc()
   }
 
 changeLang.addEventListener('click',()=>{
     curLangRus = !curLangRus
     changeLangFunc()
-    localStorage.setItem('LoginovskyCurLanguage',JSON.stringify(curLangRus))
+    localStorage.setItem('SongBirdCurLanguage',JSON.stringify(curLangRus))
   })
 
 
 
   function changeLangFunc(){
-    score = JSON.parse(localStorage.getItem('LoginovskyScore'))
+    score = JSON.parse(localStorage.getItem('SongBirdScore'))
     if(curLangRus){
       changeLang.textContent = 'En'
       headerList[0].textContent = "Главная"
       headerList[3].textContent = "Главная"
       headerList[1].textContent = "Викторина"
       headerList[4].textContent = "Викторина"
-      headerList[2].textContent = "Галерея"
-      headerList[5].textContent = "Галерея"
+      headerList[2].textContent = "Результаты"
+      headerList[5].textContent = "Результаты"
       footerList[0].textContent = "Главная"
       footerList[1].textContent = "Викторина"
-      footerList[2].textContent = "Галерея"
+      footerList[2].textContent = "Результаты"
       footerBtn1.textContent = "Пройти викторину"
       footerText.textContent = 'Подпишитесь на новые викторины'
       footerBtn2.textContent = "Подтвердить"
@@ -110,11 +110,11 @@ changeLang.addEventListener('click',()=>{
       headerList[3].textContent = "Main"
       headerList[1].textContent = "Victorine"
       headerList[4].textContent = "Victorine"
-      headerList[2].textContent = "Gallery"
-      headerList[5].textContent = "Gallery"
+      headerList[2].textContent = "Results"
+      headerList[5].textContent = "Results"
       footerList[0].textContent = "Main"
       footerList[1].textContent = "Victorine"
-      footerList[2].textContent = "Gallery"
+      footerList[2].textContent = "Results"
       footerBtn1.textContent = "Play victorine"
       footerText.textContent = 'Subscribe to new victorines'
       footerBtn2.textContent = "Confirm"

@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
-        main: path.resolve(__dirname, './src/index.js'),
+        main: path.resolve(__dirname, './src/pages/main/index.js'),
     },
     resolve: {
         extensions: ['.tsx','.ts', '.js']
@@ -93,8 +93,8 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            title: 'Game-Puzzle',
-            template: path.resolve(__dirname, './src/index.html'),
+            title: 'Songbird',
+            template: path.resolve(__dirname, './src/pages/main/index.html'),
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
