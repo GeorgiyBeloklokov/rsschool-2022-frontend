@@ -94,7 +94,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            title: 'Game-Puzzle',
+            title: 'Song Bird',
             template: path.resolve(__dirname, './src/pages/main/index.html'),
             filename: 'index.html',
         }),
