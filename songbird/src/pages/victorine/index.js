@@ -19,8 +19,8 @@ let answersList = [];
 let previewList = [];
 let activeHeader = document.querySelectorAll('.active');
 let activeFooter = document.querySelectorAll('.active_footer');
-activeHeader[2].classList.add('focused');
-activeFooter[2].classList.add('focused');
+activeHeader[1].classList.add('focused');
+activeFooter[1].classList.add('focused');
 const AudioArr = [
   {
     class: 'Разминка',
@@ -584,8 +584,8 @@ function createVariants(index) {
     if (curLangRus) {
       liAnswer.textContent = element.name;
     } else {
-      if (element.EnName) {
-        liAnswer.textContent = element.EnName;
+      if (element.enDescript) {
+        liAnswer.textContent = element.enDescript;
       } else {
         liAnswer.textContent = element.name;
       }
@@ -655,8 +655,8 @@ let footerList = document.querySelectorAll('.link-footer');
 let scorePTag = document.querySelector('.main__score_text');
 let variants = document.querySelector('.main__answers_text');
 let footerBtn1 = document.querySelector('.footer_btn');
-let footerText = document.querySelector('.footer_wrap_email_text');
-let footerBtn2 = document.querySelector('.inp_btn');
+//let footerText = document.querySelector('.footer_wrap_email_text');
+//let footerBtn2 = document.querySelector('.inp_btn');
 
 function changeLangFunc() {
   if (curLangRus) {
@@ -694,8 +694,8 @@ function changeLangFunc() {
     variants.textContent = 'Variants';
     textPreview.textContent = 'Listen to the player. Select a bird from the list.';
     footerBtn1.textContent = 'Save game';
-    footerText.textContent = 'Subscribe to new victorines';
-    footerBtn2.textContent = 'Confirm';
+    //footerText.textContent = 'Subscribe to new victorines';
+    //footerBtn2.textContent = 'Confirm';
   }
   delAudio();
   delPreview();
@@ -799,7 +799,7 @@ closeBtn.addEventListener('click', () => {
   }, 900);
 });
 burger.addEventListener('click', () => {
-  activeHeader[7].classList.add('focused');
+  activeHeader[6].classList.add('focused');
   hideMenu.style.display = 'flex';
   hideMenu.style.opacity = 1;
   setTimeout(() => {

@@ -4,9 +4,7 @@ let activeFooter = document.querySelectorAll('.active_footer')
 activeHeader[0].classList.add('focused')
 activeFooter[0].classList.add('focused')
 let mainDiv = document.querySelector('.main__container')
-let noteDo = new Audio("../../assets/mp3/zvuk-notyi-do.mp3")
-let noteRe = new Audio("../../assets/mp3/zvuk-notyi-re.mp3")
-let noteLya = new Audio("../../assets/mp3/zvuk-notyi-lya.mp3")
+
 
 
 const notesArr = []
@@ -17,32 +15,14 @@ for(let i=0;i<9;i++){
    if(i<3){
     noteImg.src = "../../assets/images/snow1.png"
     div.append(noteImg)
-    div.addEventListener('mouseover',()=>{
-    noteDo.play()
- })
- div.addEventListener('click',()=>{
-    noteDo.play()
- })
    }
    if(i<6 && i>2){
     noteImg.src = "../../assets/images/snow2.png"
     div.append(noteImg)
-    div.addEventListener('mouseover',()=>{
-    noteRe.play()
- })
- div.addEventListener('click',()=>{
-    noteRe.play()
- })
    }
    if(i<9 && i>5){
     noteImg.src = "../../assets/images/snow3.png"
     div.append(noteImg)
-    div.addEventListener('mouseover',()=>{
-    noteLya.play()
- })
- div.addEventListener('click',()=>{
-    noteLya.play()
- })
    }
    notesArr.push(div)
 }
@@ -69,8 +49,6 @@ let changeLang = document.querySelector('#change_lang')
 let headerList = document.querySelectorAll('.link')
 let footerList = document.querySelectorAll('.link-footer')
 let footerBtn1 = document.querySelector('.footer_btn')
-let footerText = document.querySelector('.footer_wrap_email_text')
-let footerBtn2 = document.querySelector('.inp_btn')
 let mainText = document.querySelector('.main__text')
 
 if(localStorage.getItem('SongBirdCurLanguage')){
@@ -100,9 +78,7 @@ changeLang.addEventListener('click',()=>{
       footerList[1].textContent = "Викторина"
       footerList[2].textContent = "Результаты"
       footerBtn1.textContent = "Пройти викторину"
-      footerText.textContent = 'Подпишитесь на новые викторины'
-      footerBtn2.textContent = "Подтвердить"
-      mainText.textContent = "Любишь викторины и музыку?Тогда тебе точно понравится этот сайт!"
+      mainText.textContent = "Добро пожаловать в игру SongBird!"
     
     }else{ 
       changeLang.textContent = 'Ru'
@@ -116,9 +92,7 @@ changeLang.addEventListener('click',()=>{
       footerList[1].textContent = "Victorine"
       footerList[2].textContent = "Results"
       footerBtn1.textContent = "Play victorine"
-      footerText.textContent = 'Subscribe to new victorines'
-      footerBtn2.textContent = "Confirm"
-      mainText.textContent = "Do you like music and victorines?So this site is for you!"
+      mainText.textContent = "Welcome to SongBird!"
      
     }
   }
@@ -135,14 +109,17 @@ changeLang.addEventListener('click',()=>{
           hideMenu.style.display = 'none'
       },900)
   })
-  burger.addEventListener('click',()=>{
-      activeHeader[7].classList.add('focused')
+  
+burger.addEventListener('click', () => {
+    console.log('work click')
+      activeHeader[5].classList.add('focused')
       hideMenu.style.display = 'flex';
       hideMenu.style.opacity = 1;
       setTimeout(()=>{  
       menuList.style.height = '329px';
   },100)
   })
+
   menuList.addEventListener('click',(e)=>{
       e.stopPropagation()
   })

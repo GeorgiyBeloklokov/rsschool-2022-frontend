@@ -34,7 +34,7 @@
   }
   
   .focused {
-    background: #6fb2f0;
+    background: #0084ff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -88,7 +88,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(228, 115, 9, 0.6352941176);
+    background-color: rgba(9, 148, 228, 0.635);
     display: none;
     opacity: 0;
     justify-content: center;
@@ -99,7 +99,7 @@
     position: relative;
     width: 640px;
     height: 0px;
-    background-color: #c0bebe;
+    background-color: #6fa9ff;
     transition: 0.7s;
     overflow: hidden;
     box-sizing: border-box;
@@ -116,9 +116,9 @@
     width: 100px;
     display: flex;
     align-items: center;
-    color: #fe13c3;
+    color:  rgba(9, 148, 228, 0.635);
     text-align: center;
-    border: 1px solid #fe13c3;
+    border: 1px solid  rgba(9, 148, 228, 0.635);
     font-weight: 400;
     font-size: 15.2116px;
     line-height: 120%;
@@ -126,10 +126,10 @@
     margin-bottom: 10px;
   }
   .header_wrap .hidden_menu_list .list_menu .active:hover {
-    background-color: #fe13c3;
+    background-color:  rgba(9, 148, 228, 0.635);
   }
   .header_wrap .hidden_menu_list .close_btn {
-    color: #fe13c3;
+    color:  rgba(9, 148, 228, 0.635);
     background-color: inherit;
     border: none;
     position: absolute;

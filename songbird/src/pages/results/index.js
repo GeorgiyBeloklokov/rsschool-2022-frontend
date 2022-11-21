@@ -116,7 +116,8 @@ closeBtn.addEventListener('click',()=>{
   },900)
 })
 
-burger.addEventListener('click',()=>{
+burger.addEventListener('click', () => {
+  
   hideMenu.style.display = 'flex';
   hideMenu.style.opacity = 1;
   setTimeout(()=>{  

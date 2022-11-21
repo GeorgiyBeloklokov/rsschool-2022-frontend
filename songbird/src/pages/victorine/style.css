@@ -79,7 +79,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(228, 115, 9, 0.6352941176);
+    background-color:rgba(9, 148, 228, 0.635);
     display: none;
     opacity: 0;
     justify-content: center;
@@ -90,7 +90,7 @@
     position: relative;
     width: 640px;
     height: 0px;
-    background-color: #c0bebe;
+    background-color: #6fa9ff;
     transition: 0.7s;
     overflow: hidden;
     box-sizing: border-box;
@@ -100,14 +100,14 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    color: #4d0d2d;
+    color: #6fa9ff;
     padding: 15px;
   }
   .header_wrap .hidden_menu_list .list_menu .logo_li {
     width: 100px;
     display: flex;
     align-items: center;
-    color: #fe13c3;
+    color: #6fa9ff;
     text-align: center;
     border: 1px solid #1876ce;
     font-weight: 400;
