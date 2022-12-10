@@ -6,7 +6,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
-        main: path.resolve(__dirname, './src/index.js'),
+        main: path.resolve(__dirname, './src/index.ts'),
     },
     resolve: {
         extensions: ['.tsx','.ts', '.js']
@@ -22,7 +22,7 @@ module.exports = {
     devtool: 'inline-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: 'index.js',
     },
     resolve: {
         extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
@@ -35,7 +35,7 @@ module.exports = {
             {
             test: /\.(js|jsx|tsx|ts)$/,
             exclude: /node_modules/,
-            loader: 'babel-loader',
+            loader: 'ts-loader',
             },
             
             {
@@ -56,7 +56,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            title: 'Game-Puzzle',
+            title: 'news-js',
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html',
         }),
