@@ -1,5 +1,6 @@
 interface IObj {
-    apiKey?: string ;
+    apiKey?: string;
+    sources?: string | null;
 }
 
 interface IEndpoint {
@@ -23,18 +24,18 @@ class Loader {
         this.options = options;
     }
 
-    getResp({ endpoint, options = {} }: { endpoint: string; options?: IObj }, callback = () => {}) {
+    getResp({ endpoint, options = {} }: { endpoint: string; options?: IObj }, callback : (data:ISourcesObj | INewsObj ) => void ) {
         this.load('GET', endpoint, callback, options);
     }
 
-    errorHandler(res: IResponse) {
+    errorHandler(res: Response) {
         //console.log(`res:`,res)
         if (!res.ok) {
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
         }
-
+        console.log(`res:`,res)
         return res ;
     }
 
@@ -50,12 +51,12 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: (data: IResponse) => void, options = {} as IObj) {
+    load(method: string, endpoint: string, callback: (data: Response) => void, options = {} as IObj) {
         
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
-            .then((res) => res.json())
-            .then((data) => callback(data))
+            .then((res: Response ) => res.json())
+            .then((data ) => callback(data))
             .catch((err) => console.error(err));
             
     }

@@ -20,12 +20,12 @@ interface ISources {
 }
 
 interface INewsObj {
-    articles: IArticles[];
-    status: string;
-    totalResults: number;
+    articles?: IArticles[];
+    status?: string | number | undefined;
+    totalResults?: number;
 }
 
 interface ISourcesObj {
-    sources: ISources[];
-    status: string;
+    sources?: ISources[];
+    status?: string | number;
 }
