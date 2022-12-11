@@ -12,7 +12,7 @@ class App {
     }
 
     start() {
-        let doc = document.querySelector('.sources');
+        const doc = document.querySelector('.sources');
         if (doc) {
             doc.addEventListener('click', (e) => this.controller.getNews(e, (data:INewsObj) => this.view.drawNews(data)));
             this.controller.getSources((data:ISourcesObj) => this.view.drawSources(data));

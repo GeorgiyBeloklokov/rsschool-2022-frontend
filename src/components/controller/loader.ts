@@ -1,46 +1,27 @@
-interface IObj {
-    apiKey?: string;
-    sources?: string | null;
-}
-
-interface IEndpoint {
-    endpoint: string;
-}
-
-interface IResponse {
-    
-
-    //json(): IResponse;
-    ok: boolean;
-    status: number;
-    statusText: string | undefined;
-}
 
 class Loader {
     baseLink: string;
-    options: IObj;
-    constructor(baseLink: string, options: IObj) {
+   private _options:  Partial<IObj>;
+    constructor(baseLink: string, options: Partial<IObj>) {
         this.baseLink = baseLink;
-        this.options = options;
+        this._options = options;
     }
 
-    getResp({ endpoint, options = {} }: { endpoint: string; options?: IObj }, callback : (data:ISourcesObj | INewsObj ) => void ) {
+    getResp({ endpoint, options = {} }: { endpoint: string; options?: Partial<IObj> }, callback : (data:ISourcesObj | INewsObj ) => void ) {
         this.load('GET', endpoint, callback, options);
     }
 
     errorHandler(res: Response) {
-        //console.log(`res:`,res)
         if (!res.ok) {
-            if (res.status === 401 || res.status === 404)
+            if (res.status === Status.fourHundredOne || res.status === Status.fourHundredFour)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
         }
-        console.log(`res:`,res)
         return res ;
     }
 
-    makeUrl(options: IObj, endpoint: string) {
-        const urlOptions = { ...this.options, ...options };
+    makeUrl(options: Partial<IObj>, endpoint: string) {
+        const urlOptions = { ...this._options, ...options };
 
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -51,7 +32,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: (data: Response) => void, options = {} as IObj) {
+    load(method: string, endpoint: string, callback: (data: Response) => void, options = {} as Partial<IObj>) {
         
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)

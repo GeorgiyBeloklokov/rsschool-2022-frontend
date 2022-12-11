@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require ('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-
+const EslingPlugin = require('eslint-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
@@ -23,9 +23,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
-    },
-    resolve: {
-        extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
     },
     performance: {
       hints: false
@@ -60,6 +57,7 @@ module.exports = {
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html',
         }),
+        new EslingPlugin({ extensions: 'ts' }),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ]

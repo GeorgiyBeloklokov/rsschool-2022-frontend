@@ -2,6 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require ('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const EslingPlugin = require('eslint-webpack-plugin');
 
 
 module.exports = {
@@ -25,15 +26,10 @@ module.exports = {
         filename: 'index.js',
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
+        extensions: ['*', '.ts', '.tsx'],
     },
     module:{
         rules: [
-            /* {
-                test: /\.(js|jsx|tsx|ts)$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                }, */
             {
                 test: /\.(tsx|ts)$/,
                 loader: 'ts-loader'
@@ -65,6 +61,7 @@ module.exports = {
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html',
         }),
+        new EslingPlugin({ extensions: 'ts' }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'global.css',

@@ -1,31 +1,37 @@
 interface IArticles {
-    author: string;
-    content: string;
+    readonly author: string;
+    readonly content: string;
     description: string;
-    publishedAt: string; //"2022-12-07T17:08:06Z"
+    publishedAt: string; 
     source: { id: string; name: string };
     title: string;
-    url: string; //url
-    urlToImage: string; //urlimage
+    url: string; 
+    urlToImage: string; 
 }
-
 interface ISources {
-    category: string;
-    country: string;
-    description: string;
+    readonly category: string;
+    readonly country: string;
+    readonly description: string;
     id: string;
     language: string;
     name: string;
     url: string;
 }
-
 interface INewsObj {
     articles?: IArticles[];
-    status?: string | number | undefined;
+    status?: string | number;
     totalResults?: number;
 }
-
-interface ISourcesObj {
+interface ISourcesObj extends Pick<INewsObj, 'status'> {
     sources?: ISources[];
-    status?: string | number;
+ }
+
+type IObj = {
+    apiKey: string;
+    sources: string | null;
+}
+
+enum Status {
+    fourHundredOne = 401,
+    fourHundredFour = 404,
 }

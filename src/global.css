@@ -20,6 +20,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
+    padding: 17px;;
 }
 footer .copyright {
     font-size: 14px;
@@ -34,4 +36,25 @@ footer .copyright a:hover {
 }
 footer .copyright:before {
     content: '©';
+}
+
+footer .github {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-right: 15px;
+}
+
+footer .github a {
+    color: #444;
+}
+
+.rsschool__image {
+    cursor: pointer;
+    height: 55px;
+    width: 60px;
+    margin-left: 30px;
+
+    
+    
 }
