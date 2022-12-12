@@ -19,7 +19,7 @@ module.exports = {
         hot: true,
         port: 8080
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
