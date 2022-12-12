@@ -13,7 +13,7 @@ class News {
                 if (idx % 2) newsClone.querySelector('.news__item')?.classList.add('alt');
                 const newsMetaPhoto = newsClone.querySelector('.news__meta-photo') as HTMLElement;
                 if (newsMetaPhoto)
-                    newsMetaPhoto.style.backgroundImage = `url(${item.urlToImage || 'https://res.cloudinary.com/graham-media-group/image/fetch/f_auto/q_auto/c_scale,w_900/https://arc-anglerfish-arc2-prod-gmg.s3.amazonaws.com/public/VCH4PNVUTRGXZJIPJXUX2EIF74.png?_a=AJE+xWI0'})`;
+                    newsMetaPhoto.style.backgroundImage = `url(${item.urlToImage || '../../img/news.jpg'})`;
 
                 const newsMetaAuthor = newsClone.querySelector('.news__meta-author') as HTMLElement;
                 if (newsMetaAuthor) newsMetaAuthor.textContent = item.author || item.source.name;

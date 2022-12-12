@@ -25,7 +25,8 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    padding: 17px;;
+    padding: 17px;
+    z-index: 5;
 }
 footer .copyright {
     font-size: 14px;
@@ -58,7 +59,4 @@ footer .github a {
     height: 55px;
     width: 60px;
     margin-left: 30px;
-
-    
-    
 }
