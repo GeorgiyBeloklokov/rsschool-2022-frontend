@@ -1,0 +1,19 @@
+{
+  "name": "async-race",
+  "version": "1.0.0",
+  "description": "learning project of RSSchool developed by Georgiy Beloklokov",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/georgiybeloklokov-JSFE2022Q3.git"
+  },
+  "author": "Georgiy Beloklokov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/georgiybeloklokov-JSFE2022Q3/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/georgiybeloklokov-JSFE2022Q3#readme"
+}

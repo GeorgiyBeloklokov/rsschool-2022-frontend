@@ -1,2 +1,2 @@
-# georgiybeloklokov-JSFE2022Q3
-Private repository for @georgiybeloklokov
+# async race
+Learning project of RSScholl whit async functionality
