@@ -24,18 +24,9 @@ const baseConfig = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-            { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, /* type: 'asset/resource' */ },
             {
-                test: /\.svg$/,
-                //issuer: /\.scss$/,
-                use: [
-                    {
-                        loader: 'svg-url-loader',
-                        options: {
-                            limit: 10000,
-                        },
-                    },
-                ],
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             },
         ],
     },
@@ -59,7 +50,7 @@ const baseConfig = {
             filename: 'index.css',
         }),
         new CopyWebpackPlugin({
-            patterns: [{ from: './src/assets', to: 'assets' }, { from: './public' }],
+            patterns: [{ from: './src/assets', to: 'assets' } , { from: './public' }],
         }),
     ],
 };

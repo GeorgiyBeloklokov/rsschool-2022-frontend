@@ -1,7 +1,4 @@
 .footer {
-    //min-width: 32rem;
-    //width: 100%;
-    //margin: 0 auto;
     display: flex;
     justify-content: space-between;
     background-color: #d9dee3;
@@ -9,44 +6,52 @@
 }
 
 .github {
-   //margin: 0 10px;
-    //margin-top: 6px;
-    //display: block;
-    //text-decoration: none;
-    //width: 12rem;
-    //height: 100%;
     margin-left: 82px;
-    // 
+    //
     background-size: 35px;
     background-repeat: no-repeat;
     background-position: left center;
-    //line-height: 45px;
+
     color: $primary;
-    transition: 0.3s; 
+    transition: 0.3s;
     display: flex;
     align-items: center;
     text-decoration: none;
     margin-right: 82px;
     background-image: url('./assets/svg/rs_school.svg');
-    //background-position: left center;
+    background-size: contain;
 }
-    
+.github-text {
+    font-size: 31px;
+
+    color: $primary;
+
+    transition: 0.3s;
+    margin-left: 143px;
+    &:hover {
+        color: $primary-lighters;
+    }
+}
+
 .school {
     display: flex;
+
     align-items: center;
-    text-decoration:none;
+    text-decoration: none;
     margin-right: 82px;
     background-image: url('./assets/svg/github.svg');
-    background-position: right center;
-
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .school-year {
-    //bottom: 0;
-    //right: 0;
     font-size: 31px;
-    //letter-spacing: -2px;
+    letter-spacing: 5px;
     color: $primary;
-    //line-height: .9;
     transition: 0.3s;
+    margin-right: 56px;
+    &:hover {
+        color: $primary-lighters;
+    }
 }
