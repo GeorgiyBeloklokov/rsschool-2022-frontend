@@ -3,13 +3,13 @@ const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const loader = require('sass-loader');
+//const loader = require('sass-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const baseConfig = {
-    experiments: {
+    /* experiments: {
         asset: true,
-    },
+    }, */
     entry: path.resolve(__dirname, './src/index.ts'),
     mode: 'development',
     module: {
@@ -24,9 +24,10 @@ const baseConfig = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-            { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+            { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, /* type: 'asset/resource' */ },
             {
                 test: /\.svg$/,
+                //issuer: /\.scss$/,
                 use: [
                     {
                         loader: 'svg-url-loader',
