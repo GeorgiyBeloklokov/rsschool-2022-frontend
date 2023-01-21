@@ -1,0 +1,36 @@
+.header {
+    position: relative;
+    background-color: #121C1E;
+    z-index: 10;
+    width: 100%;
+}
+
+.header-container {
+    height: 70px;
+
+    a {
+        position: relative;
+        display: block;
+        font-family: $font-decor;
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 20px;
+        transition: .3s;
+    }
+  
+    a:hover {
+        color: #278D9F;
+    }
+}
+
+.active-link::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    height: 3px;
+    background-color: #278D9F;
+}
