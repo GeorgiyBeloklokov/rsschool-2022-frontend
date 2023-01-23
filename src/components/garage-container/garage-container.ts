@@ -2,6 +2,8 @@ import Control from '@/common/components/control';
 import Race from '@/utils/race';
 import { ICar, ICarData } from '@/models/car-model';
 import CarContainer from '../car-container/car-container';
+import ModalWinner from '../modal-winner/modal-winner';
+import ApiWinner from '@/api/api-winners';
 import state from '@/common/state';
 
 export default class GarageContainer extends Control {
@@ -9,6 +11,7 @@ export default class GarageContainer extends Control {
 
   private race!: Race;
 
+  private modal!: ModalWinner;
 
   private timeArr: number[] = [];
 
@@ -19,6 +22,7 @@ export default class GarageContainer extends Control {
   constructor(
     parentNode: HTMLElement,
     public data: ICarData,
+    public apiWinner: ApiWinner,
     public isRace?: boolean,
   ) {
     super(parentNode, 'div', 'garage-container', '');
@@ -51,7 +55,11 @@ export default class GarageContainer extends Control {
       const action = this.carContainer.carControl.car.car.startDriving(car.id);
       const winner = await this.race.race(action);
       this.timeArr.push(winner.time);
-      
+      if (this.timeArr.length === 1) {
+        this.modal = new ModalWinner(this.node, `${winner.name} went first ${winner.time} s`);
+        this.modal.onClick = () => this.modal.destroy();
+        await this.apiWinner.saveWinner({ id: winner.id, time: winner.time });
+      }
     }
   }
 

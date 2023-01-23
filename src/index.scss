@@ -1,9 +1,8 @@
-@import './styles/vars/vars';
-@import './styles/components/footer'; 
-@import './styles/vars/vars';
+@import './styles/absrtacts/vars';
 @import './styles/components/router-container';
 @import './styles/components/garage-page';
-
+@import './styles/components/winner-page';
+@import './styles/components/footer';
 
 * {
     box-sizing: border-box;
