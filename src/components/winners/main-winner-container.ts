@@ -6,7 +6,7 @@ import WinnerTable from './table';
 export default class MainWinnerContainer extends Control {
   private winnersTitle: Control<HTMLElement>;
 
-  private winnersSubtitle: any;
+  private winnersSubtitle: Control<HTMLElement>;
 
   public winnerTable: WinnerTable;
 

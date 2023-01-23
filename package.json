@@ -6,6 +6,7 @@
     "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
     "build": "webpack --config ./webpack.config.js --env mode=prod",
     "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint --fix .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC",

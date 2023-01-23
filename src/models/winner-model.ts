@@ -1,7 +1,7 @@
 import { ICar } from './car-model';
 
 export interface IWinner {
-  id: string | undefined,
+  id: string,
   wins: number,
   time: number,
 }

@@ -58,7 +58,7 @@ export default class GarageContainer extends Control {
       if (this.timeArr.length === 1) {
         this.modal = new ModalWinner(this.node, `${winner.name} went first ${winner.time} s`);
         this.modal.onClick = () => this.modal.destroy();
-        await this.apiWinner.saveWinner({ id: winner.id, time: winner.time });
+        if (winner.id) await this.apiWinner.saveWinner({ id: winner.id, time: winner.time });
       }
     }
   }

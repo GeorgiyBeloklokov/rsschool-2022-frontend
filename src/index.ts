@@ -23,13 +23,12 @@ window.onpopstate = () => {
   currentRouteId = Number(window.location.hash.split('/')[1]);
   const currentRoutName = window.location.hash.slice(1);
   const routes = getAllRouts();
-  const currentRoute = Object.values(routes)
-    .find((value: { name: string; }) => value.name === currentRoutName);
+  const currentRoute = Object.values(routes).find(
+    (value: { name: string }) => value.name === currentRoutName,
+  );
   if (!currentRoute) throw Error('CurrentRoute root element not found');
   while (document.body.firstElementChild) {
     document.body.removeChild(document.body.firstElementChild);
   }
   currentRoute.component();
-  const footer = new Footer(document.body);
 };
-
