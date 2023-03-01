@@ -1,11 +1,5 @@
-# georgiybeloklokov-JSFE2022Q3
+### Learning project of RSschool
 
-Hello my friend!
+Task: https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-1/dom-api/codejam-the-gem-puzzle.md
 
-If you have any questions or suggestions for me, please tell me in telegram **@Georgiybv**
-
-or in my mail: georgiy.reus@gmail.com
-
-Thanks!
-
-Private repository for @georgiybeloklokov
+Deploy: https://georgiybeloklokov.github.io/rsschool-2022-frontend/gb-gem-puzzle/index.html
