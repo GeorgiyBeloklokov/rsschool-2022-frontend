@@ -1,2 +1,2 @@
-# georgiybeloklokov-JSFE2022Q3
-Private repository for @georgiybeloklokov
+### Online-zoo 
+Task: https://github.com/rolling-scopes-school/tasks/blob/master/stage1/stream2/online-zoo/README.md
